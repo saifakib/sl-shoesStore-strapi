@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "static_pages",
+  "info": {
+    "singularName": "static-page",
+    "pluralName": "static-pages",
+    "displayName": "static_page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
