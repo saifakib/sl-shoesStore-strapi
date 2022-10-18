@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_details",
+  "info": {
+    "singularName": "order-detail",
+    "pluralName": "order-details",
+    "displayName": "OrderDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "product_variant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-variant.product-variant"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brand"
+    "displayName": "Brand",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,16 +18,22 @@
       "unique": true
     },
     "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "status": {
       "type": "boolean",
       "default": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

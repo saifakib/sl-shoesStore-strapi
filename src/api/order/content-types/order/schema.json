@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "coupon": {
+      "type": "string"
+    },
+    "total_amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "payment_status": {
+      "type": "boolean",
+      "default": false
+    },
+    "billing_address": {
+      "type": "text",
+      "required": true
+    },
+    "shipping_address": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Proceed",
+        "Delivered"
+      ],
+      "default": "Pending"
+    }
+  }
+}
