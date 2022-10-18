@@ -12,36 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "user_id": {
-      "type": "integer",
-      "required": true
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     },
-    "product_id": {
-      "type": "integer",
-      "required": true
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
     },
     "review": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "rating": {
-      "type": "enumeration",
-      "enum": [
-        "One",
-        "Two,",
-        "Three",
-        "Four",
-        "Five"
-      ]
+      "type": "integer",
+      "max": 5,
+      "min": 0
     },
     "status": {
       "type": "boolean",
       "default": true
-    },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "reviews"
     }
   }
 }
