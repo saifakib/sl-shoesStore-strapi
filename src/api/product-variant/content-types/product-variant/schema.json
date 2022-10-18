@@ -26,6 +26,10 @@
     "color": {
       "type": "customField",
       "customField": "plugin::color-picker.color"
+    },
+    "stocks": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
